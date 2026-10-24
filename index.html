@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive nature photo gallery demonstrating JavaScript DOM updates and mouse events.">
+  <title>Nature in Focus — Interactive Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">A SMALL COLLECTION OF THE GREAT OUTDOORS</p>
+      <h1>Nature in <em>focus.</em></h1>
+      <p>Three places. A moment to explore. Hover over a photograph to take a closer look.</p>
+    </header>
+
+    <div id="image" role="img" aria-label="Photo preview" aria-live="polite">Hover over an image below to display here.</div>
+
+    <section aria-label="Choose a photograph" class="gallery">
+      <figure>
+        <img class="preview" src="images/mountains.jpg" alt="Snow-covered mountain peaks beneath a cloudy sky" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+        <figcaption><span>01 / THE MOUNTAINS</span>Above it all</figcaption>
+      </figure>
+      <figure>
+        <img class="preview" src="images/forest.jpg" alt="Sunlight filtering through a peaceful green forest" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+        <figcaption><span>02 / THE FOREST</span>A quieter world</figcaption>
+      </figure>
+      <figure>
+        <img class="preview" src="images/coast.jpg" alt="Turquoise ocean waves washing onto a sandy tropical beach" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+        <figcaption><span>03 / THE COAST</span>Where land meets sea</figcaption>
+      </figure>
+    </section>
+    <footer>Explore with your mouse, tap an image, or use the Tab key. <a href="https://github.com/Kez-DE/interactive-photo-gallery">View source on GitHub</a></footer>
+  </main>
+</body>
+</html>
