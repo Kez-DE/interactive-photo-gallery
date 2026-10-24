@@ -10,9 +10,9 @@ header > p:last-child { color: #5f695f; font-size: 15px; line-height: 1.7; max-w
 .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 figure { margin: 0; }
 .preview { display: block; width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; border-radius: 8px; cursor: pointer; }
-.preview:hover, .preview:focus-visible { outline: 3px solid #617b50; outline-offset: 4px; }
+figure:hover .preview, figure:focus-visible { outline: 3px solid #617b50; outline-offset: 4px; }
 figcaption { padding-top: 14px; font: 21px Georgia, serif; }
 figcaption span { display: block; margin-bottom: 8px; font: bold 10px Arial, sans-serif; letter-spacing: .12em; color: #65735f; }
 footer { margin-top: 34px; border-top: 1px solid #d6dccf; padding-top: 20px; font-size: 12px; line-height: 1.8; color: #5f695f; }
 a { color: #355d3d; margin-left: 8px; text-underline-offset: 3px; }
-@media (max-width: 540px) { main { padding: 30px 18px; } .gallery { gap: 12px; } figcaption { font-size: 15px; } figcaption span { font-size: 8px; } #image { padding: 20px; font-size: 19px; } }
+@media (max-width: 540px) { .gallery { grid-template-columns: repeat(2, 1fr); } main { padding: 30px 18px; } .gallery { gap: 12px; } figcaption { font-size: 15px; } figcaption span { font-size: 8px; } #image { padding: 20px; font-size: 19px; } }

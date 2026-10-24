@@ -11,3 +11,11 @@ function undo() {
   image.textContent = "Hover over an image below to display here.";
   image.setAttribute("aria-label", "Photo preview");
 }
+
+function addTabFocus() {
+  const figures = document.querySelectorAll(".gallery figure");
+  for (let i = 0; i < figures.length; i++) {
+    figures[i].setAttribute("tabindex", "0");
+  }
+  console.log("Gallery loaded: keyboard focus added to " + figures.length + " figures.");
+}

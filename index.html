@@ -3,33 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An interactive nature photo gallery demonstrating JavaScript DOM updates and mouse events.">
+  <meta name="description" content="An interactive nature photo gallery with six photographs, mouse interaction, and keyboard access.">
   <title>Nature in Focus — Interactive Photo Gallery</title>
   <link rel="stylesheet" href="style.css">
   <script src="gallery.js" defer></script>
 </head>
-<body>
+<body onload="addTabFocus()">
   <main>
     <header>
       <p class="eyebrow">A SMALL COLLECTION OF THE GREAT OUTDOORS</p>
       <h1>Nature in <em>focus.</em></h1>
-      <p>Three places. A moment to explore. Hover over a photograph to take a closer look.</p>
+      <p>Six places. A moment to explore. Hover over a photograph or press Tab to take a closer look.</p>
     </header>
 
     <div id="image" role="img" aria-label="Photo preview" aria-live="polite">Hover over an image below to display here.</div>
 
     <section aria-label="Choose a photograph" class="gallery">
-      <figure>
-        <img class="preview" src="images/mountains.jpg" alt="Snow-covered mountain peaks beneath a cloudy sky" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/mountains.jpg" alt="Snow-covered mountain peaks beneath a cloudy sky" width="900" height="600">
         <figcaption><span>01 / THE MOUNTAINS</span>Above it all</figcaption>
       </figure>
-      <figure>
-        <img class="preview" src="images/forest.jpg" alt="Sunlight filtering through a peaceful green forest" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/forest.jpg" alt="Sunlight filtering through a peaceful green forest" width="900" height="600">
         <figcaption><span>02 / THE FOREST</span>A quieter world</figcaption>
       </figure>
-      <figure>
-        <img class="preview" src="images/coast.jpg" alt="Turquoise ocean waves washing onto a sandy tropical beach" tabindex="0" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" onclick="upDate(this)" width="900" height="600">
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/coast.jpg" alt="Turquoise ocean waves washing onto a sandy tropical beach" width="900" height="600">
         <figcaption><span>03 / THE COAST</span>Where land meets sea</figcaption>
+      </figure>
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/lake.jpg" alt="A wooden boathouse beside an alpine lake reflecting mountains and evergreen trees" width="900" height="600">
+        <figcaption><span>04 / THE LAKE</span>Still waters</figcaption>
+      </figure>
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/desert.jpg" alt="Red sandstone buttes rising above a sunlit desert plain" width="900" height="600">
+        <figcaption><span>05 / THE DESERT</span>Shaped by the wind</figcaption>
+      </figure>
+      <figure onmouseover="upDate(this.querySelector('img'))" onmouseleave="undo()" onfocus="upDate(this.querySelector('img'))" onblur="undo()" onclick="upDate(this.querySelector('img'))">
+        <img class="preview" src="images/waterfall.jpg" alt="A waterfall cascading over a rocky cliff into a green pool" width="900" height="600">
+        <figcaption><span>06 / THE WATERFALL</span>Follow the water</figcaption>
       </figure>
     </section>
     <footer>Explore with your mouse, tap an image, or use the Tab key. <a href="https://github.com/Kez-DE/interactive-photo-gallery">View source on GitHub</a></footer>
